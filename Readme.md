@@ -2,7 +2,7 @@
 
 * Студент: [Елена Кундасева](https://up.htmlacademy.ru/htmlcss/40/user/2392939).
 * Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
-
+* Сайт: [Мой проект Сидона](https://elena-kund.github.io/2392939-sedona-40/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
