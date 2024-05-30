@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Елена Кундасева](https://up.htmlacademy.ru/htmlcss/40/user/2392939).
-* Наставник: [Ирина Антипина] (https://htmlacademy.ru/profile/id2108789).
+* Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
 
 ---
 
