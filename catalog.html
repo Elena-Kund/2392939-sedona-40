@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header class="main-header"> <!--В классе задаем выравнивание дочерних элементов по горизотали-->
+    <a class="navigation-logo" href="index.html"><img src="#" alt="Логотип Седона"></a>
+    <nav class="menu-navigation">
+      <ul class="list-navigation">
+        <li class="item-navigation"><a class="navigation-link" href="/index.html">Главная</a></li>
+        <li class="item-navigation"><a class="navigation-link" href="#">О седоне</a></li>
+        <li class="item-navigation"><a class="navigation-link" href="#">Гостиницы</a></li>
+        </ul>
+
+      <ul class="list-communication">
+        <li class="item-communication"><a href="#"><svg width="30" height="30">
+              <path d="..."/>
+            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+            <span class="visually-hidden">Поиск</span>
+          </a></li>
+        <li class="item-communication"><a href="#"><svg width="30" height="30">
+            <path d="..."/>
+          </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+          <sup class="index-item">12</sup> <!--Вместо 12 должно подтягиваться количество избранных элементов, возможно элементу требуется id-->
+          <span class="visually-hidden">Избранное</span>
+           </a></li>
+        <li class="item-communication"><a class="communication-link" href="#">Хочу сюда</a></li>
+      </ul>
+      </nav>
+     </header>
+    <main>
+     <section class="search-hotel"> <!--Здесь в классе задаем фоновое изображение-->
+     <h1 class="content-h1">Гостиницы Седона</h1>
+        <nav class="bread-crumbs">
+            <ul class="header-bread-crumbs"> <!--В этом классе нужно задать разделитель ">"-->
+                <li>
+                    <a href="index.html">
+                    <svg width="30" height="30"> <!--Векторное изображение домика-->
+                    <path d="..."/>
+                  </svg>
+                    </a>
+                    </li>
+             </ul>
+             <ul class="header-bread-crumbs">
+                <li>
+                    Гостиницы
+                </li>
+             </ul>
+             </nav>
+
+             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+
+                <fieldset class="catalog-filter-group">
+                    <legend class="catalog-filter-title">Гостиницы</legend>
+                    <ul class="catalog-list-filter">
+                    <li>
+                    <label class="control">
+                        <input class="control-input" type="checkbox" name="pool">
+                        Бассейн
+                      </label>
+                    </li>
+                    <li>
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="parking">
+                        Парковка
+                      </label>
+                    </li>
+                    <li>
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="internet">
+                        Wi-Fi
+                      </label>
+                    </li>
+                   </ul>
+                  </fieldset>
+
+                  <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Тип жилья</legend>
+                  <ul class="list-filter-type">
+                    <li>
+                        <label class="control">
+                            <input class="control-input" type="radio" name="product-group" value="hotel">
+                            Гостиница
+                          </label>
+                     </li>
+                     <li>
+                        <label class="control">
+                            <input class="control-input" type="radio" name="product-group" value="motel">
+                            Мотель
+                          </label>
+                     </li>
+                     <li>
+                        <label class="control">
+                            <input class="control-input" type="radio" name="product-group" value="apartments">
+                            Апартаменты
+                          </label>
+                     </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="catalog-filter-group">
+                    <legend class="catalog-filter-title">Стоимость</legend>
+                  </fieldset>
+
+                <button class="button" type="submit">Применить</button>
+                <button class="button" type="reset">Сбросить</button>
+              </form>
+     </section>
+
+    </main>
+     <footer class="page-footer">
+        <section class="footer-contacts">
+          <ul class="social-contact">
+          <li class="social-contact-item">
+            <a href="#"><svg width="30" height="30">
+              <path d="..."/>
+            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+            <span class="visually-hidden">ВКонтакте</span>
+          </a>
+          </li>
+          <li class="social-contact-item">
+            <a href="#"><svg width="30" height="30">
+              <path d="..."/>
+            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+            <span class="visually-hidden">Телеграм</span>
+          </a>
+          </li>
+          <li class="social-contact-item">
+            <a href="#"><svg width="30" height="30">
+              <path d="..."/>
+            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+            <span class="visually-hidden">Ютуб</span>
+          </a>
+          </li>
+          </ul>
+          <div class="phone-footer">
+           <a class="phone-footer-link" href="tel:+78128121212"></a>
+            +7(812)812 12 12
+          </div>
+          <div class="logo-footer">
+            <img src="#" alt="Логотип HTML Академии">
+          </div>
+        </section>
+      </footer>
+
+     </body>
+    </html>
