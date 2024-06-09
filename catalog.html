@@ -2,34 +2,31 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Каталог отелей в Седоне</title>
   </head>
   <body>
     <header class="main-header"> <!--В классе задаем выравнивание дочерних элементов по горизотали-->
-    <a class="navigation-logo" href="index.html"><img src="#" alt="Логотип Седона"></a>
-    <nav class="menu-navigation">
-      <ul class="list-navigation">
-        <li class="item-navigation"><a class="navigation-link" href="/index.html">Главная</a></li>
-        <li class="item-navigation"><a class="navigation-link" href="#">О седоне</a></li>
-        <li class="item-navigation"><a class="navigation-link" href="#">Гостиницы</a></li>
-        </ul>
+        <a href="index.html"><img src="images/logo.svg" alt="Логотип Седоны"></a>
+        <nav class="menu-navigation">
+          <ul class="list-navigation">
+            <li class="item-navigation"><a class="navigation-link" href="index.html">Главная</a></li>
+            <li class="item-navigation"><a class="navigation-link" href="#">О Седоне</a></li>
+            <li class="item-navigation"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
+            </ul>
 
-      <ul class="list-communication">
-        <li class="item-communication"><a href="#"><svg width="30" height="30">
-              <path d="..."/>
-            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
-            <span class="visually-hidden">Поиск</span>
-          </a></li>
-        <li class="item-communication"><a href="#"><svg width="30" height="30">
-            <path d="..."/>
-          </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
-          <sup class="index-item">12</sup> <!--Вместо 12 должно подтягиваться количество избранных элементов, возможно элементу требуется id-->
-          <span class="visually-hidden">Избранное</span>
-           </a></li>
-        <li class="item-communication"><a class="communication-link" href="#">Хочу сюда</a></li>
-      </ul>
-      </nav>
-     </header>
+          <ul class="list-communication">
+            <li class="item-communication"><a href="#">
+              <img src="images/search-icon.svg" alt="Поиск"><span class="visually-hidden">Поиск</span>
+              </li>
+            <li class="item-communication"><a href="#">
+               <img src="images/like.svg" alt="Поиск"><span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
+              <span class="visually-hidden">Избранное</span>
+               </a></li>
+            <li class="item-communication"><a class="communication-link" href="#">Хочу сюда</a></li>
+          </ul>
+          </nav>
+         </header>
+
     <main>
      <section class="search-hotel"> <!--Здесь в классе задаем фоновое изображение-->
      <h1 class="content-h1">Гостиницы Седона</h1>
@@ -37,9 +34,7 @@
             <ul class="header-bread-crumbs"> <!--В этом классе нужно задать разделитель ">"-->
                 <li>
                     <a href="index.html">
-                    <svg width="30" height="30"> <!--Векторное изображение домика-->
-                    <path d="..."/>
-                  </svg>
+                        <img src="images/icon-house.svg" alt="Поиск">
                     </a>
                     </li>
              </ul>
@@ -102,47 +97,127 @@
 
                 <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Стоимость</legend>
+                    <input type="number" value="0" name="price-min" placeholder="от">
+                    <input type="number" value="9000" name="price-max" placeholder="до">
+
                   </fieldset>
 
                 <button class="button" type="submit">Применить</button>
                 <button class="button" type="reset">Сбросить</button>
               </form>
      </section>
+     <section class="result-hotel">
+        <h2>Найдено гостиниц: 38</h2> <!--Вместо 38 подставляется число найденных гостиниц-->
+        <select class="select-control" aria-label="Сортировка">
+            <option value="cheap">Сначала дешёвые</option>
+            <option value="popular">Сначала популярные</option>
+            <option value="expensive">Сначала дорогие</option>
+          </select>
+          <ul class="list-result-hotel">
+            <li class="item-result-hotel">
+              <a href="catalog.html?view=tile"><img src="images/result-icon/tile.svg" alt="Плитка"><span class="visually-hidden">Плитка</span></a>
+              </li>
+              <li class="item-result-hotel">
+                <a href="catalog.html?view=card"><img src="images/result-icon/preview.svg" alt="Превью"><span class="visually-hidden">Превью</span></a>
+                </li>
+                <li class="item-result-hotel">
+                    <a href="catalog.html?view=list"><img src="images/result-icon/list.svg" alt="Список"><span class="visually-hidden">Список</span></a>
+                    </li>
+          </ul>
 
+          <ul class="hotels-found">
+            <li class="hotels-found-card">
+                <a class="product-card-link" href="#">
+                    <img class="product-card-image" src="images/hotels/hotel-1.jpg" width="300" height="212" alt="Вид на звездное небо">
+                    <p class="product-card-title">Amara Resort & Spa</p>
+                    <p class="product-card-text">Гостиница <span class="product-card-price">От 4000 ₽</span></p>
+                </a>
+                    <button class="btn-details"> Подробнее</button>
+                    <button class="btn-favorites"> В избранное</button>
+                    <div class="rating-four-stars">Рейтинг: 8,5</div> <!--В этом классе задаем количество звезд--->
+                </li>
+
+                <li class="hotels-found-card">
+                    <a class="product-card-link" href="#">
+                        <img class="product-card-image" src="images/hotels/hotel-2.jpg" width="300" height="212" alt="Вид на скалы">
+                        <p class="product-card-title">Villas at Poco Diablo</p>
+                        <p class="product-card-text">Гостиница <span class="product-card-price">От 5000 ₽</span></p>
+                    </a>
+                        <button class="btn-details"> Подробнее</button>
+                        <button class="btn-favorites"> В избранное</button>
+                        <div class="rating-four-stars">Рейтинг: 9,2</div> <!--В этом классе задаем количество звезд--->
+                    </li>
+
+                    <li class="hotels-found-card">
+                        <a class="product-card-link" href="#">
+                            <img class="product-card-image" src="images/hotels/hotel-3.jpg" width="300" height="212" alt="Вид на природный заповедник">
+                            <p class="product-card-title">Desert Quail Inn</p>
+                            <p class="product-card-text">Гостиница <span class="product-card-price">От 2500 ₽</span></p>
+                        </a>
+                            <button class="btn-details"> Подробнее</button>
+                            <button class="btn-favorites"> В избранное</button>
+                            <div class="rating-three-stars">Рейтинг: 6,9</div> <!--В этом классе задаем количество звезд--->
+                        </li>
+
+                        <li class="hotels-found-card">
+                            <a class="product-card-link" href="#">
+                                <img class="product-card-image" src="images/hotels/hotel-4.jpg" width="300" height="212" alt="Вид на звездное небо">
+                                <p class="product-card-title">GreenTree Inn</p>
+                                <p class="product-card-text">Гостиница <span class="product-card-price">От 1500 ₽</span></p>
+                            </a>
+                                <button class="btn-details"> Подробнее</button>
+                                <button class="btn-favorites"> В избранное</button>
+                                <div class="rating-two-stars">Рейтинг: 5,0</div> <!--В этом классе задаем количество звезд--->
+                            </li>
+            </ul>
+            <ol class="all-pages">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">10</a></li>
+                </ol>
+
+     </section>
+
+     <section class="catalog-newsletter">
+        <h2>Подпишитесь на рассылку</h2>
+          <p>Только полезная информация и никакого спама!</p>
+          <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+             <label>Введите email <input type="email" placeholder="Ваш e-mail" name="e-newsletter-name" required></label>
+            <button class="button" type="submit">Подписаться</button>
+          </form>
+     </section>
     </main>
-     <footer class="page-footer">
-        <section class="footer-contacts">
-          <ul class="social-contact">
+    <footer class="page-footer">
+        <ul class="social-contact">
           <li class="social-contact-item">
-            <a href="#"><svg width="30" height="30">
-              <path d="..."/>
-            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+            <a href="https://vk.com/htmlacademy">
+              <img src="images/social-icon/icon-vk.svg" alt="Мы в ВКонтакте">
             <span class="visually-hidden">ВКонтакте</span>
           </a>
           </li>
           <li class="social-contact-item">
-            <a href="#"><svg width="30" height="30">
-              <path d="..."/>
-            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+            <a href="https://t.me/htmlacademy">
+              <img src="images/social-icon/icon-tg.svg" alt="Мы в Телеграм">
             <span class="visually-hidden">Телеграм</span>
           </a>
           </li>
           <li class="social-contact-item">
-            <a href="#"><svg width="30" height="30">
-              <path d="..."/>
-            </svg> <!--Предполагается использование декоративного изображения в векторном формате-->
+            <a href="https://www.youtube.com/user/htmlacademyru">
+              <img src="images/social-icon/icon-youtube.svg" alt="Мы на Ютубе">
             <span class="visually-hidden">Ютуб</span>
           </a>
           </li>
           </ul>
           <div class="phone-footer">
-           <a class="phone-footer-link" href="tel:+78128121212"></a>
-            +7(812)812 12 12
+           <a class="phone-footer-link" href="tel:+78128121212">+7(812)812 12 12</a>
           </div>
           <div class="logo-footer">
-            <img src="#" alt="Логотип HTML Академии">
+           <a class="logo-footer-link" href="#"> <img src="images/logo-HTML-Academy.svg" alt="Логотип HTML Академии"></a>
           </div>
-        </section>
+
       </footer>
 
      </body>
