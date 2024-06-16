@@ -2,34 +2,35 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Каталог отелей в Седоне</title>
   </head>
   <body>
     <header class="main-header"> <!--В классе задаем выравнивание дочерних элементов по горизотали-->
         <a href="index.html"><img src="images/logo.svg" alt="Логотип Седоны"></a>
-        <nav class="menu-navigation">
-          <ul class="list-navigation">
-            <li class="item-navigation"><a class="navigation-link" href="index.html">Главная</a></li>
-            <li class="item-navigation"><a class="navigation-link" href="#">О Седоне</a></li>
-            <li class="item-navigation"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
-            </ul>
-
-          <ul class="list-communication">
-            <li class="item-communication"><a href="#">
-              <img src="images/search-icon.svg" alt="Поиск"><span class="visually-hidden">Поиск</span>
-              </li>
-            <li class="item-communication"><a href="#">
-               <img src="images/like.svg" alt="Поиск"><span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
-              <span class="visually-hidden">Избранное</span>
-               </a></li>
-            <li class="item-communication"><a class="communication-link" href="#">Хочу сюда</a></li>
+      <nav class="menu-navigation">
+        <ul class="list-navigation">
+          <li class="item-navigation"><a class="navigation-link" href="index.html">Главная</a></li>
+          <li class="item-navigation"><a class="navigation-link" href="#">О Седоне</a></li>
+          <li class="item-navigation"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
           </ul>
-          </nav>
-         </header>
+
+        <ul class="list-communication">
+          <li class="item-communication"><a href="#">
+            <!--<img src="images/search-icon.svg" alt="Поиск">--><span class="visually-hidden">Поиск</span>
+            </li>
+          <li class="item-communication"><a href="#">
+            <!--<img src="images/like.svg" alt="Поиск">--> <span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
+            <span class="visually-hidden">Избранное</span>
+             </a></li>
+          <li class="item-communication"><a class="communication-link" href="#"><span>Хочу сюда</span></a></li>
+        </ul>
+        </nav>
+       </header>
 
     <main>
      <section class="search-hotel"> <!--Здесь в классе задаем фоновое изображение-->
-     <h1 class="content-h1">Гостиницы Седона</h1>
+     <h1><span class="content-h1">Гостиницы Седона</span></h1>
         <nav class="bread-crumbs">
             <ul class="header-bread-crumbs"> <!--В этом классе нужно задать разделитель ">"-->
                 <li>
