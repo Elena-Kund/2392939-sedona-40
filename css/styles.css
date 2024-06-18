@@ -13,25 +13,122 @@
     src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
   }
+  html {
+    height: 100%;
+  }
+
   body {
-    background-color: white;
-    color: black;
-    font-family: PT Sans, sans-serif;
+    margin: 0;
+    display: flex; /*реализовано по аналогии с Бородинским, но до конца нет понимания, зачем именно здесь нужен flex*/
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #ffffff;
+    color: #171515;;
+    font-family: "PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
+    width: 1200px;
+    text-align: center;
+}
+.main-container {
+    flex-grow: 1;
+  }
+.main-header {
+   display: flex;
+   justify-content: space-between;
 }
 
-h1 {
-    font-family: PT Sans, sans-serif;
+.menu-navigation {
+    display: flex;
+    margin: 0 auto;
+    width: 1100px;
+  }
+
+  .item-navigation {
+    list-style-type: none;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.list-navigation{
+    display: flex;
+   justify-content: space-between;
+    width: 350px; /*поправить дланные, не нашла ширину*/
+    margin: 0;
+    padding: 0;
+
+}
+
+.list-communication{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px; /*поправить дланные, не нашла ширину*/
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
+.item-communication{
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+}
+.link-logo{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: -10px;
+
+}
+
+.communication-link {
+    text-transform: uppercase;
+    color: #ffffff; /*Не работает.Не могу найти, где именно перебивается цвет*/
+    background-color: #756157;
+    margin: 5px;
+    padding: 5px 25px;
+    border-radius: 5px;
+
+}
+.page-container{
+    width: 1200px;
+  margin: 0 auto;
+}
+.welcome-img{
+    display: block;
+    margin: 0 auto;
+    padding: 67px;
+}
+
+.main-text{
+    font-family: "PT Sans", sans-serif;
     font-size: 30px;
     line-height: 36px;
-    text-align: center;
-    color: black;
     text-transform: uppercase;
-    font-weight: 700
+    font-weight: 700;
+    margin: 30px;
 }
+.basic-text {
+    font-family: "PT Sans", sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
 
-h2 {
+}
+/*Разметка преимуществ*/
+.location-advantages {
+    display: flex;
+   justify-content: space-between;
+}
+.item-advantages-small{
+    width: 230px;
+    height: 160;
+    padding: 80px;
+    list-style-type: none;
+}
+.secondary-title{
     font-family: PT Sans, sans-serif;
     font-size: 24px;
     line-height: 28px;
@@ -39,28 +136,31 @@ h2 {
     text-transform: uppercase;
     font-weight: 700
 }
-
-h3 {
-    font-family: PT Sans, sans-serif;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 700
+.main-feedback{
+    width: 592px;
+    margin: auto;
+    margin-top: 70px; /*неизвестный отступ*/
+    margin-bottom: 70px;
 }
+.button-feedback{
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+}
+/*Ниже - от 17.06*/
 
 .item-advantages-grand {
-    background-color: #82B3D3; /* далее этот цвет переводим в формат rgb*/
-    color: #ffff
+    background-color: #82B3D3; /* далее этот цвет переводим в формат rgba*/
+    color: #ffffff;
 }
 
 .pale-element {
-    background-color: rgb(131, 179, 211, 0.12);
+    background-color: rgba(131, 179, 211, 0.12);
     color: #171515;
 }
 
 .bright-element{
-    background-color: rgb(131, 179, 211, 0.2);
+    background-color: rgba(131, 179, 211, 0.2);
     color: #171515;
 }
 
@@ -69,7 +169,7 @@ h3 {
     background-repeat: no-repeat;
     height: 415px;
     width: 1200px;
-    color: #ffff
+    color: #ffffff;
 
 }
 
@@ -87,10 +187,10 @@ h3 {
     background-repeat: no-repeat;
     height: 485px;
     width: 1200px;
-    color: #ffff;
+    color: #ffffff;
 }
 .search-hotel span {
-    color: #ffff;
+    color: #ffffff;
 }
 
 .menu-navigation a{
@@ -98,31 +198,17 @@ h3 {
     line-height: 24px;
     size: 20px;
     font-weight: 700;
-    text-align: center;
+    /*text-align: center;*/
     text-decoration: none;
     color: #171515;
 }
 
-.menu-navigation a:hover{
-    font-family: "PT Sans", sans-serif;
-    line-height: 24px;
-    size: 20px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    color: #17151571;
-}
 
 
-.communication-link span{
-    text-transform: uppercase;
-    color: #ffff;
-    background-color: #756157
 
-}
 
 .phone-footer a{
-    font-family: PT Sans, sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 40px;
     line-height: 40px;
     text-transform: uppercase;
@@ -131,7 +217,7 @@ h3 {
 }
 
 .product-card-title {
-    font-family: PT Sans, sans-serif;
+    font-family: "PT Sans", sans-serif;
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;

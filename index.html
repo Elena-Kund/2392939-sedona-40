@@ -7,9 +7,11 @@
   </head>
   <body>
     <header class="main-header"> <!--В классе задаем выравнивание дочерних элементов по горизотали-->
-      <a href="index.html"><img src="images/logo.svg" alt="Логотип Седоны"></a>
-    <nav class="menu-navigation">
+       <nav class="menu-navigation">
+        <!--логотип находится как бы под фоном, необходимо перенести его внахлест-->
+        <a href="index.html" class="link-logo"><img src="images/logo.svg" alt="Логотип Седоны"></a>
       <ul class="list-navigation">
+
         <li class="item-navigation"><a class="navigation-link" href="index.html">Главная</a></li>
         <li class="item-navigation"><a class="navigation-link" href="#">О Седоне</a></li>
         <li class="item-navigation"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
@@ -17,28 +19,27 @@
 
       <ul class="list-communication">
         <li class="item-communication"><a href="#">
-          <!--<img src="images/search-icon.svg" alt="Поиск">--><span class="visually-hidden">Поиск</span>
+         <span class="visually-hidden">Поиск</span>
           </li>
         <li class="item-communication"><a href="#">
-          <!--<img src="images/like.svg" alt="Поиск">--> <span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
+         <span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
           <span class="visually-hidden">Избранное</span>
            </a></li>
-        <li class="item-communication"><a class="communication-link" href="#"><span>Хочу сюда</span></a></li>
+        <li class="item-communication"><a class="communication-link" href="#">Хочу сюда</a></li>
       </ul>
       </nav>
      </header>
 
-    <main>
+    <main class="main-container">
+      <div class="page-container">
       <div class="index-img">
-        <div class="container"><img src="images/welcome.svg" alt="Welcome to the gorgeous Sedona">
+        <img src="images/welcome.svg" class="welcome-img" alt="Welcome to the gorgeous Sedona">
       </div>
     </div>
-    <section class="main-advantages"><!--В этом классе задаем фоновые изображения, перечисленные ниже-->
-      <!--<img src="images/index-background.jpg" width="1200" height="485" alt="Фоновые скалы">
-      <img src="images/welcome.svg" alt="Welcome to the gorgeous Sedona">
-      <img src="images/divider.png" width="1200" height="57" alt="Маска">-->
-      <h1>Седона - небольшой городок в Аризоне, заслуживающий большего</h1>
-      <p>Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+    <section class="main-advantages">
+      <h1 class="main-text">Седона - небольшой городок в Аризоне,<br> заслуживающий большего</h1>
+      <p class="basic-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+
       <ul class="list-advantages">
         <li class="item-advantages-grand left"><h2>Настоящий городок</h2>
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
@@ -58,44 +59,44 @@
           <img src="images/index-photo-2.jpg" width="800" height="385" class="img-advantages" alt="Скалы">
         </li>
         </ul>
+
     </section>
     <section class="main-characteristics">
-     <h2>Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-      <p>Опытный персонал и качественное обсуживание!</p>
-      <ul class="main-advantages">
+     <h2 class="secondary-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+      <p class="basic-text">Опытный персонал и качественное обсуживание!</p>
+      <ul class="location-advantages">
         <li class="item-advantages-small pale-element">
-          <!--<img src="images/house.svg" alt="Дом">-->
-          <h3>Жилье</h3>
+
+          <h3 class="secondary-title">Жилье</h3>
           <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
         </li>
         <li class="item-advantages-small">
-          <!--<img src="images/food.svg" alt="Еда">-->
-          <h3>Еда</h3>
+
+          <h3 class="secondary-title">Еда</h3>
           <p>Заказывайте фирменный бургер и вы не разочаруетесь!</p>
         </li>
         <li class="item-advantages-small pale-element">
-          <!--<img src="images/box.svg" alt="Местные сувениры">-->
-          <h3>Сувениры</h3>
+
+          <h3 class="secondary-title">Сувениры</h3>
           <p>Не только китайского, но и настоящего местного производства</p>
         </li>
          </ul>
     </section>
 
     <section class="main-feedback">
-      <h2>Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p> <!--тег <br> - опционален, его актуальность решается в процессе стилизации-->
+      <h2 class="secondary-title">Заинтересовались?</h2>
+      <p class="basic-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p> <!--тег <br> - опционален, его актуальность решается в процессе стилизации-->
       <button class="button-feedback communication-link" type="button"><span>Поиск гостиницы в Седоне</span></button>
     </section>
-    <section class="main-newsletter"><!--В этом классе задаем фоновое изображение-->
-      <!--<img src="images/subscribe.jpg" width="1200" height="415" alt="Фоновые скалы">-->
-      <h2>Подпишитесь на рассылку</h2>
+    <section class="main-newsletter">
+      <h2 class="secondary-title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
            <label>Введите email <input type="email" placeholder="Ваш e-mail" name="e-newsletter-name" required></label>
           <button class="button" type="submit">Подписаться</button>
         </form>
    </section>
-
+  </div>
   </main>
 
   <footer class="page-footer">
