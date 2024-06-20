@@ -6,27 +6,32 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header class="main-header"> <!--В классе задаем выравнивание дочерних элементов по горизотали-->
+    <div class="wrapper">
+    <header class="main-header">
        <nav class="menu-navigation">
         <!--логотип находится как бы под фоном, необходимо перенести его внахлест-->
+        <div class="first-navigation">
         <a href="index.html" class="link-logo"><img src="images/logo.svg" alt="Логотип Седоны"></a>
       <ul class="list-navigation">
-
         <li class="item-navigation"><a class="navigation-link" href="index.html">Главная</a></li>
         <li class="item-navigation"><a class="navigation-link" href="#">О Седоне</a></li>
         <li class="item-navigation"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
         </ul>
-
-      <ul class="list-communication">
+        </div>
+        <div class="second-navigation">
+        <ul class="list-communication">
         <li class="item-communication"><a href="#">
-         <span class="visually-hidden">Поиск</span>
+          &#128386; <!--Заглушка для заполнения пустого места-->
+          <span class="visually-hidden">Поиск</span>
           </li>
         <li class="item-communication"><a href="#">
-         <span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
+          &#128386; <!--Заглушка для заполнения пустого места-->
+          <span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
           <span class="visually-hidden">Избранное</span>
            </a></li>
-        <li class="item-communication"><a class="communication-link" href="#">Хочу сюда</a></li>
+        <li class="item-communication item-link"><a class="communication-link" href="#">Хочу сюда</a></li>
       </ul>
+      </div>
       </nav>
      </header>
 
@@ -41,29 +46,43 @@
       <p class="basic-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
 
       <ul class="list-advantages">
-        <li class="item-advantages-grand left"><h2>Настоящий городок</h2>
+        <li class="item-advantages-grand left">
+          <div class="block-advantages">
+          <h2>Настоящий городок</h2>
+          <hr class="item-hr">
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+        </div>
           <img src="images/index-photo-1.jpg" width="800" height="385" class="img-advantages" alt="Улицы Седона">
+
         </li>
         <li class="item-advantages-small pale-element"><h2>Небольшая площадь</h2>
+          <hr class="item-hr-black">
           <p>Все достопримечательности находятся очень близко</p>
         </li>
         <li class="item-advantages-small bright-element"><h2>Красивая дорога</h2>
+          <hr class="item-hr-black">
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li class="item-advantages-small pale-element"><h2>Мало туристов</h2>
+          <hr class="item-hr-black">
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </li>
-        <li class="item-advantages-grand right"><h2>Там есть Мост Дьявола</h2>
+        <li class="item-advantages-grand right">
+          <div class="block-advantages">
+          <h2>Там есть Мост Дьявола</h2>
+          <hr class="item-hr">
          <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-          <img src="images/index-photo-2.jpg" width="800" height="385" class="img-advantages" alt="Скалы">
+        </div>
+         <img src="images/index-photo-2.jpg" width="800" height="385" class="img-advantages" alt="Скалы">
         </li>
         </ul>
 
     </section>
     <section class="main-characteristics">
+      <div class="main-invitation">
      <h2 class="secondary-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
       <p class="basic-text">Опытный персонал и качественное обсуживание!</p>
+      </div>
       <ul class="location-advantages">
         <li class="item-advantages-small pale-element">
 
@@ -86,36 +105,39 @@
     <section class="main-feedback">
       <h2 class="secondary-title">Заинтересовались?</h2>
       <p class="basic-text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p> <!--тег <br> - опционален, его актуальность решается в процессе стилизации-->
-      <button class="button-feedback communication-link" type="button"><span>Поиск гостиницы в Седоне</span></button>
+      <button class="button-feedback" type="submit">Поиск гостиницы в Седоне</button>
     </section>
     <section class="main-newsletter">
+        <div class="welcome-img">
       <h2 class="secondary-title">Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
            <label>Введите email <input type="email" placeholder="Ваш e-mail" name="e-newsletter-name" required></label>
           <button class="button" type="submit">Подписаться</button>
         </form>
+        </div>
    </section>
-  </div>
+
   </main>
 
   <footer class="page-footer">
+    <div class="footer-container">
     <ul class="social-contact">
       <li class="social-contact-item">
         <a href="https://vk.com/htmlacademy">
-          <img src="images/social-icon/icon-vk.svg" alt="Мы в ВКонтакте">
+          <!--Заглушка для заполнения пустого места--><img src="images/social-icon/icon-vk.svg" alt="Мы в ВКонтакте">
         <span class="visually-hidden">ВКонтакте</span>
       </a>
       </li>
       <li class="social-contact-item">
         <a href="https://t.me/htmlacademy">
-          <img src="images/social-icon/icon-tg.svg" alt="Мы в Телеграм">
+         <!--Заглушка для заполнения пустого места--> <img src="images/social-icon/icon-tg.svg" alt="Мы в Телеграм">
         <span class="visually-hidden">Телеграм</span>
       </a>
       </li>
       <li class="social-contact-item">
         <a href="https://www.youtube.com/user/htmlacademyru">
-          <img src="images/social-icon/icon-youtube.svg" alt="Мы на Ютубе">
+          <!--Заглушка для заполнения пустого места--><img src="images/social-icon/icon-youtube.svg" alt="Мы на Ютубе">
         <span class="visually-hidden">Ютуб</span>
       </a>
       </li>
@@ -126,7 +148,8 @@
       <div class="logo-footer">
        <a class="logo-footer-link" href="#"> <img src="images/logo-HTML-Academy.svg" alt="Логотип HTML Академии"></a>
       </div>
-
+    </div>
   </footer>
+</div>
   </body>
 </html>

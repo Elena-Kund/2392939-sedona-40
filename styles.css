@@ -1,0 +1,340 @@
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+  }
+  html {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    display: flex; /*реализовано по аналогии с Бородинским, но до конца нет понимания, зачем именно здесь нужен flex*/
+    flex-direction: column;
+    min-height: 100%;
+    background-color: #f2f2f2;
+    color: #171515;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+}
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    box-shadow: 1px 0 15px 0 rgba(0, 0, 0, 0.2);  /*Для оси y тень не задана, но она появилась*/
+}
+.main-container {
+    flex-grow: 1;
+  }
+.main-header {
+   display: flex;
+   justify-content: space-between;
+
+}
+
+.menu-navigation {
+    display: flex;
+    font-family: "PT Sans", sans-serif;
+    line-height: 24px;
+    size: 20px;
+    font-weight: 700;
+    color: #171515;
+  }
+  .menu-navigation a{
+    text-decoration: none;
+    color: #171515;
+}
+
+.first-navigation{
+    display: flex;
+    margin-left: 70px;
+    width: 507px;
+}
+.second-navigation{
+
+    margin-left: 285px;
+
+}
+
+
+.list-navigation{
+    display: flex;
+   justify-content: space-between;
+    width: 350px; /*поправить дланные, не нашла ширину*/
+    margin: 0;
+    padding: 0;
+
+}
+
+.list-communication{
+    display: flex;
+    padding: 0;
+
+}
+.item-communication{
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+}
+.item-navigation {
+    list-style-type: none;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.link-logo{
+    margin-bottom: -10px;
+
+}
+
+.item-link a{
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #756157;
+    margin: 5px;
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+.page-container{
+    width: 1200px;
+  margin: 0 auto;
+}
+.welcome-img{
+    display: block;
+    margin: 0 auto;
+    padding: 67px;
+}
+
+.main-text{
+    font-family: "PT Sans", sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 30px;
+}
+.basic-text {
+    font-family: "PT Sans", sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+
+}
+/*Разметка преимуществ*/
+.location-advantages {
+    display: flex;
+   justify-content: space-between;
+   padding-left: 0;
+}
+.list-advantages{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+.item-advantages-small{
+    width: 240px;
+    height: 160;
+    padding: 80px;
+    list-style-type: none;
+    min-height: 230px;
+
+}
+.item-advantages-grand {
+    min-width: 100%;
+    background-color: #82B3D3; /* далее этот цвет переводим в формат rgba*/
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+
+}
+.block-advantages {
+    width: 230px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.left img {
+    float: right;
+
+}
+
+.right img {
+    float: left;
+}
+.item-hr{
+    width: 60px;
+    border: none;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+}
+.item-hr-black{
+    width: 60px;
+    border: none;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/*Разметка преимуществ*/
+
+.main-invitation{
+    margin: 60px;
+}
+
+
+.secondary-title{
+    font-family: PT Sans, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700
+}
+.main-feedback{
+    width: 592px;
+    margin: auto;
+    margin-top: 70px; /*неизвестный отступ*/
+    margin-bottom: 70px;
+}
+.button-feedback{
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #756157;
+    margin: 10px;
+    padding: 10px 35px;
+    border-radius: 5px;
+
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+
+.pale-element {
+    background-color: rgba(131, 179, 211, 0.12);
+    color: #171515;
+}
+
+.bright-element{
+    background-color: rgba(131, 179, 211, 0.2);
+    color: #171515;
+}
+
+.main-newsletter{
+    background-image: url("../images/subscribe.jpg");
+    background-repeat: no-repeat;
+   /* height: 415px;
+    width: 1200px;*/
+    color: #ffffff;
+    background-size: cover;
+
+}
+
+.index-img {
+    background-image: url("../images/index-background.jpg");
+    background-repeat: no-repeat;
+    height: 485px;
+    width: 1200px;
+
+}
+
+
+.search-hotel {
+    background-image: url("../images/catalog-background.jpg");
+    background-repeat: no-repeat;
+    height: 485px;
+    width: 1200px;
+    color: #ffffff;
+}
+.search-hotel span {
+    color: #ffffff;
+}
+
+
+
+.phone-footer a{
+    font-family: "PT Sans", sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #171515;
+    text-decoration: none;
+}
+
+.product-card-title {
+    font-family: "PT Sans", sans-serif;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.hotels-found-card a{
+    text-decoration: none;
+    color: #171515;
+}
+.all-pages a {
+    text-decoration: none;
+    color: #171515;
+    background-color:#82B3D3
+}
+
+
+.page-footer{
+    display: flex;
+}
+.social-contact{
+    display: flex;
+    padding:0;
+}
+.social-contact-item{
+    list-style-type: none;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+.logo-footer{
+    margin-right: 30px;
+}
+.phone-footer{
+    margin-right: 250px;
+    margin-left: 250px;
+}
+.social-contact-item{
+    margin-right: 20px;
+}
