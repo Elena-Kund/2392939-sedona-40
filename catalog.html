@@ -11,28 +11,27 @@
            <nav class="menu-navigation">
             <!--логотип находится как бы под фоном, необходимо перенести его внахлест-->
             <div class="first-navigation">
-            <a href="index.html" class="link-logo"><img src="images/logo.svg" alt="Логотип Седоны"></a>
+            <a href="index.html" class="link-logo"><img src="images/logo.svg" class="img-logo" alt="Логотип Седоны"></a>
           <ul class="list-navigation">
             <li class="item-navigation"><a class="navigation-link" href="index.html">Главная</a></li>
             <li class="item-navigation"><a class="navigation-link" href="#">О Седоне</a></li>
             <li class="item-navigation"><a class="navigation-link" href="catalog.html">Гостиницы</a></li>
             </ul>
             </div>
-            <div class="second-navigation">
             <ul class="list-communication">
-            <li class="item-communication decor-link"><a href="#">
+            <li class="item-communication decor-link">
+              <a class="icon-link" href="#">
               &#128386; <!--Заглушка для заполнения пустого места-->
-              <span class="visually-hidden">Поиск</span>
+              <span class="visually-hidden">Поиск</span> </a>
               </li>
-            <li class="item-communication decor-link"><a href="#">
+            <li class="item-communication decor-link"><a class="icon-link" href="#">
               &#128386; <!--Заглушка для заполнения пустого места-->
               <span class="index-favorites">12</span> <!--Вместо 12 должно подтягиваться количество избранных элементов-->
               <span class="visually-hidden">Избранное</span>
                </a></li>
             <li class="item-communication item-link"><a class="communication-link" href="#">Хочу сюда</a></li>
           </ul>
-          </div>
-          </nav>
+           </nav>
          </header>
     <main class="main-catalog">
      <section class="search-hotel">
@@ -57,21 +56,20 @@
                     <legend class="catalog-filter-title">Инфраструктура</legend>
                     <ul class="catalog-list-filter">
                     <li>
-                    <label class="control">
-                        <input class="control-input" type="checkbox" name="pool">
+                       <input class="control-input" id="pool" type="checkbox" name="pool">
+                       <label class="control" for="pool"></label>
                         Бассейн
                       </label>
                     </li>
                     <li>
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="parking">
-                        Парковка
+                        <input class="control-input" id="parking" type="checkbox" name="parking">
+                        <label class="control" for="parking">Парковка
                       </label>
                     </li>
                     <li>
-                      <label class="control">
-                        <input class="control-input" type="checkbox" name="internet">
-                        Wi-Fi
+                       <input class="control-input" id="internet" type="checkbox" name="internet">
+                       <label class="control" for="internet">
+                       Wi-Fi
                       </label>
                     </li>
                    </ul>
@@ -104,9 +102,10 @@
                 <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Стоимость</legend>
                     <div class="input-block">
-                    <input type="number" value="0" name="price-min" placeholder="от">
-                    <input type="number" value="9000" name="price-max" placeholder="до">
+                    <input type="number" class="placeholder-item left-element" value="0" name="price-min" placeholder="от">
+                    <input type="number" class="placeholder-item right-element" value="9000" name="price-max" placeholder="до">
                       </div>
+                      <input type="range" class="item-range" min="0" max="9000" step="1" value="50">
                   </fieldset>
                    <div class="button-group">
                 <button class="button-filter apply" type="submit">Применить</button>
@@ -116,7 +115,7 @@
      </section>
      <section class="result-hotel">
       <div class="container-search-catalog">
-        <h2 class="secondary-title">Найдено гостиниц: 38</h2> <!--Вместо 38 подставляется число найденных гостиниц-->
+        <h2 class="secondary-title">Найдено гостиниц: 38</h2>
         <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвые</option>
             <option value="popular">Сначала популярные</option>
@@ -137,47 +136,55 @@
           </div>
           <ul class="hotels-found">
             <li class="hotels-found-card">
-                <a class="product-card-link" href="#">
+                <!--<a class="product-card-link" href="#">-->
                     <img class="product-card-image" src="images/hotels/hotel-1.jpg" width="300" height="212" alt="Вид на звездное небо">
                     <p class="product-card-title">Amara Resort & Spa</p>
-                    <p class="product-card-text">Гостиница <span class="product-card-price">От 4000 ₽</span></p>
-                </a>
+                    <p class="product-card-text">Гостиница</p>
+                    <p class="product-card-price">От 4000 ₽</p>
+                <!--</a>-->
                     <a class="product-card-details" href="#"> Подробнее</a>
                     <button class="btn-favorites"> В избранное</button>
+                    <div class="product-item">&#128386;&#128386;&#128386;&#128386; </div>
                     <div class="rating-four-stars">Рейтинг: 8,5</div> <!--В этом классе задаем количество звезд--->
                 </li>
 
                 <li class="hotels-found-card">
-                    <a class="product-card-link" href="#">
+
                         <img class="product-card-image" src="images/hotels/hotel-2.jpg" width="300" height="212" alt="Вид на скалы">
                         <p class="product-card-title">Villas at Poco Diablo</p>
-                        <p class="product-card-text">Гостиница <span class="product-card-price">От 5000 ₽</span></p>
-                    </a>
+                        <p class="product-card-text">Гостиница</p>
+                         <p class="product-card-price">От 5000 ₽</p>
+
                     <a class="product-card-details" href="#"> Подробнее</a>
                         <button class="btn-favorites"> В избранное</button>
+                        <div class="product-item">&#128386;&#128386;&#128386;&#128386; </div>
                         <div class="rating-four-stars">Рейтинг: 9,2</div> <!--В этом классе задаем количество звезд--->
                     </li>
 
                     <li class="hotels-found-card">
-                        <a class="product-card-link" href="#">
+
                             <img class="product-card-image" src="images/hotels/hotel-3.jpg" width="300" height="212" alt="Вид на природный заповедник">
                             <p class="product-card-title">Desert Quail Inn</p>
-                            <p class="product-card-text">Гостиница <span class="product-card-price">От 2500 ₽</span></p>
-                        </a>
+                            <p class="product-card-text">Гостиница</p>
+                            <p class="product-card-price">От 2500 ₽</p>
+
                         <a class="product-card-details" href="#"> Подробнее</a>
                             <button class="btn-favorites"> В избранное</button>
-                            <div class="rating-three-stars">Рейтинг: 6,9</div> <!--В этом классе задаем количество звезд--->
+                            <div class="product-item">&#128386;&#128386;&#128386;&#128386; </div>
+                            <div class="rating-four-stars">Рейтинг: 6,9</div> <!--В этом классе задаем количество звезд--->
                         </li>
 
                         <li class="hotels-found-card">
-                            <a class="product-card-link" href="#">
+
                                 <img class="product-card-image" src="images/hotels/hotel-4.jpg" width="300" height="212" alt="Вид на звездное небо">
                                 <p class="product-card-title">GreenTree Inn</p>
-                                <p class="product-card-text">Гостиница <span class="product-card-price">От 1500 ₽</span></p>
-                            </a>
+                                <p class="product-card-text">Гостиница</p>
+                                 <p class="product-card-price">От 1500 ₽</p>
+
                             <a class="product-card-details" href="#"> Подробнее</a>
                                 <button class="btn-favorites"> В избранное</button>
-                                <div class="rating-two-stars">Рейтинг: 5,0</div> <!--В этом классе задаем количество звезд--->
+                                <div class="product-item">&#128386;&#128386;&#128386;&#128386; </div>
+                                <div class="rating-four-stars">Рейтинг: 5,0</div> <!--В этом классе задаем количество звезд--->
                             </li>
             </ul>
             <ol class="all-pages">
