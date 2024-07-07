@@ -103,6 +103,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: relative;
     /*margin-left: 20px;*/
 }
 .item-navigation {
@@ -135,9 +136,9 @@
 .page-container{
     width: 1200px;
   margin: 0 auto;
-  background-image: url("../images/index-background.jpg");
-    background-repeat: no-repeat;
-}
+  background-image: url("../images/index-background.jpg"), url("../images/divider.svg");
+    background-repeat: no-repeat, no-repeat;
+   }
 
 .welcome-img{
     display: block;
@@ -436,7 +437,7 @@
     background: #82B3D3;
     border-radius: 5px;
     margin-right: 5px;
-    vertical-align:middle;
+    vertical-align:middle
 
 }
 .item-present{
@@ -487,11 +488,13 @@ background-color: transparent;
     color: #171515;
     margin: 5px;
     padding: 5px 5px;
+    position: relative;
 }
 
 .img-logo{
-   /* height: 90px;*/
    display: block;
+   position: relative;
+   z-index: 1;
 
 }
 .placeholder-item{
@@ -522,9 +525,12 @@ background-color: transparent;
     grid-template-columns: repeat(2, 1fr);
     margin:0;
     padding:20px;
-    border: 2px solid #e6e6e6;
+    border: 1px solid #e6e6e6;
     border-radius: 5px;
-    gap: 10px;
+    gap: 16px 20px;
+    text-align: left;
+    align-items: start;
+    grid-template-rows: 212 1fr;
 
 }
 .product-card-image{
@@ -554,13 +560,13 @@ background-color: transparent;
 }
 .product-card-details{
     display: block;
-    text-align: left;
+    text-align: center;
     padding: 8px 10px 8px 10px;
     border-radius: 5px;
     text-transform: uppercase;
     font-family: "PT Sans", sans-serif;
     line-height: 20px;
-    size: 16px;
+    font-size: 16px;
     font-weight: 700;
     border: 0;
     color: #ffffff;
@@ -573,7 +579,7 @@ background-color: transparent;
 }
 
 .rating-four-stars{
-    text-align: right;
+    text-align: center;
     padding: 8px 10px 8px 10px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -592,14 +598,150 @@ background-color: transparent;
     text-transform: uppercase;
     font-family: "PT Sans", sans-serif;
     line-height: 20px;
-    size: 16px;
+    font-size: 16px;
     font-weight: 700;
     border: 0;
     color: #ffffff;
     background-color: #82B3D3;
     }
 
-/*
+
+/*7.07*/
+
+.activ {
+border-bottom: 2px solid #756157;
+}
+.navigation-link{
+    display: block;
+    padding: 20px 0;
+}
+.icon-activ{
+    color: #171515;
+}
+
+.icon-activ:hover{
+    color: #171515ad;
+}
+
+.icon-activ:active{
+    color: #1715154a;
+}
+
+.icon-sosial-slyle{
+    color: #83B3D3;
+}
+
+.icon-sosial-slyle:hover{
+    color: #68A2CA;
+}
+.icon-sosial-slyle:focus{
+    color: #68A2CA;
+}
+
+.icon-sosial-slyle:active{
+    color: rgba(104, 162, 202, 0.3)
+}
+
+.phone-footer-link:hover{
+    color: #756157;
+}
+.phone-footer-link:focus{
+    color: #756157;
+}
+.phone-footer-link:active{
+    color: rgb(117, 97, 87,  0.3)
+}
+.logo-footer-link{
+    color: #000000;
+}
+.logo-footer-link:hover{
+    color: #756157;
+}
+.logo-footer-link:focus{
+    color: #756157;
+}
+.logo-footer-link:active{
+    color: rgb(117, 97, 87,  0.3)
+}
+
+.index-favorites{
+    position: absolute;
+    top: -3px;
+    left: 16px;
+    border-radius: 50%;
+    background-color: #7DB54F;
+    font-size: 10px;
+    color: #ffffff;
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+
+}
+.newsletter-name{
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.newsletter-name::placeholder{
+font-size: 18px;
+background-color: #F2F2F2;
+border-radius: 4px, 0 0 4px;
+padding: 12px, 20px, 12px, 20px;
+display: block;
+margin: 0;
+border: none;
+
+}
+
+.newsletter-visual{
+    width: 452px;
+    border-radius: 5px 0 0 5px ;
+    height: auto;
+    border: none;
+
+}
+
+.icon-style{
+    display: block;
+    padding: 30px;
+}
+
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  align-content:stretch;
+
+}
+
+.button{
+    background: #82B3D3;
+    padding: 8px 50px 8px 50px;
+    border-radius: 0 5px 5px 0;
+    text-transform: uppercase;
+    font-family: "PT Sans", sans-serif;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    color: #ffffff;
+}
+
+/*.newsletter-form{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0;
+    width: 600px;
+}
+
+/*.newsletter-form {
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  align-content:stretch;
+}
+    /*
 .control-input{
     position: absolute;
     z-index: -1;
