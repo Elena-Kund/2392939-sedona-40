@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="/images/favicon.ico" sizes="32x32">
+    <link rel="icon" href="images/favicon.ico" sizes="32x32">
   </head>
   <body>
     <div class="wrapper">
@@ -25,7 +25,7 @@
            <span class="visually-hidden">Поиск</span> </a>
            </li>
          <li class="item-communication decor-link"><a class="icon-link" href="#">
-           <span class="icon-activ"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill="#000" d="M9.9 19c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C1.4 9.8 1 8.6 1 7.4 1 4.4 3.4 2 6.5 2 7.8 2 9 2.5 10 3.3c1-.8 2.3-1.3 3.5-1.3 3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg><span>
+           <span class="icon-activ"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"><path d="M9.9 19c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9C1.4 9.8 1 8.6 1 7.4 1 4.4 3.4 2 6.5 2 7.8 2 9 2.5 10 3.3c1-.8 2.3-1.3 3.5-1.3 3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg><span>
            <span class="index-favorites">12</span>
            <span class="visually-hidden">Избранное</span>
             </a></li>
@@ -45,29 +45,29 @@
       <ul class="list-advantages"> <!--Ранее обсуждали, что <hr> сюда не подходит, картинка тоже будет смотреться странно. Тогда как реализовать?-->
         <li class="item-advantages-grand left">
           <div class="block-advantages">
-          <h2>Настоящий городок</h2>
+          <h2 class="h2-index">Настоящий городок</h2>
 
           <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
         </div>
           <img src="images/index-photo-1.jpg" width="800" height="385" class="img-advantages" alt="Улицы Седона">
 
         </li>
-        <li class="item-advantages-small pale-element"><h2>Небольшая площадь</h2>
+        <li class="item-advantages-small pale-element"><h2 class="h2-index">Небольшая площадь</h2>
 
           <p>Все достопримечательности находятся очень близко</p>
         </li>
-        <li class="item-advantages-small bright-element"><h2>Красивая дорога</h2>
+        <li class="item-advantages-small bright-element"><h2 class="h2-index">Красивая дорога</h2>
 
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="item-advantages-small pale-element"><h2>Мало туристов</h2>
+        <li class="item-advantages-small pale-element"><h2 class="h2-index">Мало туристов</h2>
 
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </li>
         <li class="item-advantages-grand right">
           <img src="images/index-photo-2.jpg" width="800" height="385" class="img-advantages" alt="Скалы">
           <div class="block-advantages">
-          <h2>Там есть Мост Дьявола</h2>
+          <h2 class="h2-index">Там есть Мост Дьявола</h2>
 
          <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
         </div>
@@ -158,5 +158,45 @@
     </div>
   </footer>
 </div>
+
+<div class="modal-container visually-hidden">
+  <div class="modal modal-auth">
+    <button class="modal-close-button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <section class="modal-content">
+      <h2 class="secondary-title">Поиск гостиницы в Седоне</h2>
+
+      <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="field-group">
+          <label class="check-in field-form-text" for="auth-check-in">Дата заезда</label>
+          <input class="auth-form-field field" type="date" id="auth-check-in" name="auth-check-in" placeholder="17.07.2024">
+        </p>
+        <p class="field-group">
+          <label class="check-out field-form-text" for="auth-check-out">Дата выезда</label>
+          <input class="auth-form-field field" type="date" id="auth-check-out" name="auth-check-out" placeholder="17.07.2025">
+        </p>
+
+
+       <div class="field-group">
+        <label class="adult field-form-text" for="adult-person">Взрослые</label>
+             <input type="number" class="placeholder-item left-element"  name="adult-person" placeholder="2">
+
+             <label class="children field-form-text" for="children">Дети</label>
+             <input type="number" class="placeholder-item right-element" name="children" placeholder="1">
+
+
+
+       </div>
+
+        <button class="button auth-form-button" type="submit">Найти</button>
+
+      </form>
+    </section>
+
+  </div>
+
+</div>
+
   </body>
 </html>
