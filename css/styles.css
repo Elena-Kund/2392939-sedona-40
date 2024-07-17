@@ -979,7 +979,75 @@ border: none;
 
     .field-group{
         text-align: left;
+        margin: 35px 0;
     }
+
+
+    .auth-form-field {
+       width: 440;
+        background-color: #F2F2F2;
+        margin: 1px;
+        padding: 8px;
+        font-family: inherit;
+    }
+
+
+    .auth-form-field:hover,
+.auth-form-field:focus {
+
+    border: 2px solid #68A2CA;
+}
+.auth-form-field:focus {
+    outline: 1px solid #68A2CA;
+    }
+
+    /*disabled*/
+.auth-form-field:disabled,
+.auth-form-field:disabled:hover{
+    background-color: #756157;
+}
+.auth-form-field:invalid{
+    background-color: #fd060642;
+}
+.auth-form-field:focus:invalid{
+    background-color: #fd060642;
+}
+.auth-form-field::placeholder{
+    color: #b5b5b5;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: right;
+}
+
+.placeholder-date{
+    width: 40px;
+    background-color: #F2F2F2;
+    margin: 1px;
+    padding: 8px;
+    font-family: inherit;
+
+
+}
+.past {
+    color:#FF5757;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+
+}
+.info-free-hotel{
+    color:#333333;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+}
+
+
 /*
 +label::before
 
